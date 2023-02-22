@@ -27,6 +27,13 @@ npm run serve
 
 ===
 
+## Explain why the result of ('b' + 'a' + + 'a' + 'a').toLowerCase() is banana.
+
+```
++ 'a' becomes a NaN ("Not a Number") value because it force string to a number, while the character a cannot be parsed as a number. so It became Banana.
+You can also try by removing the ".toLowerCase()" to see the difference (expectation: 'baNaNa')
+```
+
 ## Notes:
 
 #### Data files is located in `/assets/files/data.json`

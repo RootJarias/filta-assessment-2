@@ -22,3 +22,7 @@ npm install
 ```
 npm run serve
 ```
+
+===
+
+#### Data files is located in `/assets/files/data.json`

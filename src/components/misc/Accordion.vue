@@ -22,6 +22,13 @@
     </div>
     <div class="collapse-content">
       <div class="p-3" v-html="el.content"></div>
+      <div class="mt-3 w-100 flex justify-end">
+        <button
+          class="btn bg-[#570df8] border-[#570df8] hover:border-[#0000c3] hover:bg-[#0000c3] uppercase"
+        >
+          Read More
+        </button>
+      </div>
     </div>
   </div>
 </template>

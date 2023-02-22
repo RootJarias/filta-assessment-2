@@ -44,4 +44,8 @@ const sectionStore = useSectionStore();
 const setDefaultSection = (sectionID, section) => {
   sectionStore.setSectionData(sectionID, section);
 };
+
+const closeAccordion = () => {
+  isCollapsed = true;
+};
 </script>

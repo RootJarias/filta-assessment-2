@@ -4,7 +4,9 @@
 Library/Technology Used:
 
 - Tailwind CSS: I've used tailwind CSS for utility classes. (https://tailwindcss.com/)
-- Daisy UI: For tailwind code enchancements. (https://daisyui.com/)
+- Daisy UI: Used for tailwind code enchancements. (https://daisyui.com/)
+- Pinia: Used for state management.
+- Auto Animate: To add a animation between elements that moved.
 ```
 
 ## Instructions
@@ -24,5 +26,7 @@ npm run serve
 ```
 
 ===
+
+## Notes:
 
 #### Data files is located in `/assets/files/data.json`

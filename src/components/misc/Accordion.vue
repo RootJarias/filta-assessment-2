@@ -8,7 +8,7 @@
     tabindex="0"
     v-for="(el, i) in sectionData"
     :key="i"
-    v-on:click="setDefaultSection(i, el)"
+    v-on:click="setDefaultSection($event, i, el)"
   >
     <div
       :class="
@@ -16,6 +16,7 @@
           ? 'collapse-title text-xl font-medium bg-[#570df8] text-white'
           : 'collapse-title text-xl font-medium'
       "
+      style="cursor: pointer !important"
     >
       {{ el.title }}
     </div>
@@ -41,11 +42,16 @@ const sectionData = ref(rawSectionData);
 const sectionStore = useSectionStore();
 
 // Set Functions
-const setDefaultSection = (sectionID, section) => {
+const setDefaultSection = (e, sectionID, section) => {
   sectionStore.setSectionData(sectionID, section);
-};
 
-const closeAccordion = () => {
-  isCollapsed = true;
+  let currentElement = e.target.parentElement;
+  if (currentElement.classList.contains('collapse-open')) {
+    currentElement.classList.remove('collapse-open');
+    currentElement.classList.add('collapse-close');
+  } else {
+    currentElement.classList.remove('collapse-close');
+    currentElement.classList.add('collapse-open');
+  }
 };
 </script>
